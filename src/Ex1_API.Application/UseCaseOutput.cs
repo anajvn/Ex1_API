@@ -7,7 +7,7 @@ namespace Ex1_API.Application
         public List<string> Errors { get; set; }
         public object Data { get; set; }
         public HttpStatusCode Code { get; set; }
-        public bool HasErrors => this.Errors != null;
+        public bool HasErrors => this.Errors.Any();
 
         public UseCaseOutput()
         {

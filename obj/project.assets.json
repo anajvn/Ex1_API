@@ -88,6 +88,29 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Ex1_API.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Ex1_API.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Ex1_API.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ex1_API.Application.dll": {}
+        }
+      },
+      "Ex1_API.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Ex1_API.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ex1_API.Core.dll": {}
+        }
       }
     }
   },
@@ -216,10 +239,22 @@
         "swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "Ex1_API.Application/1.0.0": {
+      "type": "project",
+      "path": "src/Ex1_API.Application/Ex1_API.Application.csproj",
+      "msbuildProject": "src/Ex1_API.Application/Ex1_API.Application.csproj"
+    },
+    "Ex1_API.Core/1.0.0": {
+      "type": "project",
+      "path": "src/Ex1_API.Core/Ex1_API.Core.csproj",
+      "msbuildProject": "src/Ex1_API.Core/Ex1_API.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Ex1_API.Application >= 1.0.0",
+      "Ex1_API.Core >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -249,7 +284,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Usuário\\Desktop\\projetos_C_sharp\\source\\repos\\Ex1_API\\src\\Ex1_API.Application\\Ex1_API.Application.csproj": {
+              "projectPath": "C:\\Users\\Usuário\\Desktop\\projetos_C_sharp\\source\\repos\\Ex1_API\\src\\Ex1_API.Application\\Ex1_API.Application.csproj"
+            },
+            "C:\\Users\\Usuário\\Desktop\\projetos_C_sharp\\source\\repos\\Ex1_API\\src\\Ex1_API.Core\\Ex1_API.Core.csproj": {
+              "projectPath": "C:\\Users\\Usuário\\Desktop\\projetos_C_sharp\\source\\repos\\Ex1_API\\src\\Ex1_API.Core\\Ex1_API.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

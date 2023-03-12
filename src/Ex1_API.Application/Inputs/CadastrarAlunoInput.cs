@@ -2,11 +2,9 @@
 {
     public class CadastrarAlunoInput
     {
-        public int Id { get; set; }
-
         public string Nome { get; set; }
-
         public string Cidade { get; set; }
+        public int? Idade { get; set; }
 
         public CadastrarAlunoInput()
         {

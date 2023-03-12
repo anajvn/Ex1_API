@@ -1,0 +1,10 @@
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\src\Ex1_API.Core\bin\Debug\net6.0\Ex1_API.Core.deps.json
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\src\Ex1_API.Core\bin\Debug\net6.0\Ex1_API.Core.dll
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\src\Ex1_API.Core\bin\Debug\net6.0\Ex1_API.Core.pdb
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\src\Ex1_API.Core\obj\Debug\net6.0\Ex1_API.Core.csproj.AssemblyReference.cache
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\src\Ex1_API.Core\obj\Debug\net6.0\Ex1_API.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\src\Ex1_API.Core\obj\Debug\net6.0\Ex1_API.Core.csproj.CoreCompileInputs.cache
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\src\Ex1_API.Core\obj\Debug\net6.0\Ex1_API.Core.dll
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\src\Ex1_API.Core\obj\Debug\net6.0\refint\Ex1_API.Core.dll
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\src\Ex1_API.Core\obj\Debug\net6.0\Ex1_API.Core.pdb
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\src\Ex1_API.Core\obj\Debug\net6.0\ref\Ex1_API.Core.dll

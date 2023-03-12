@@ -2,12 +2,10 @@
 {
     public class Aluno : BaseEntity
     {
-        public Guid Id { get; set; }
-
-        public string Nome { get; set; }
-
-        public string Cidade { get; set; }
-        public int? Idade { get; set; }
+        public Guid Id { get; private set; }
+        public string Nome { get; private set; }
+        public string Cidade { get; private set; }
+        public int? Idade { get; private set; }
 
         public Aluno(string nome, string cidade, int? idade) : base()
         {

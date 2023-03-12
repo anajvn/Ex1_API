@@ -21,25 +21,18 @@ namespace Ex1_API
 
                 Nome e Cidade do aluno não podem ser vazios
             
-                Id deve ser preenchido e não deve se repetir
-
-            Entregar a URL do projeto no GitHub. */
-
+                Id deve ser preenchido e não deve se repetir. */
 
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddScoped<ICadastrarPessoaUseCase, CadastrarPessoaUseCase>();
+            builder.Services.AddScoped<ICadastrarAlunoUseCase, CadastrarAlunoUseCase>();
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -48,26 +41,25 @@ namespace Ex1_API
 
             app.UseHttpsRedirection();
 
-            /* Criar um Middleware para controle de perfil
-
-            Somente usuários com o perfil "Ada" devem poder acessar os métodos.
-
+            /* Criar um Middleware para controle de perfil. Somente usuários com o perfil "Ada" devem poder acessar os métodos.
             O perfil deve vir via HEADER chamado “Profile” */
 
-            app.Use(async (context, next) =>
+            /*app.Use(async (context, next) =>
             {
-                if (context.Request.Headers["Profile"] != "Ada")
+                var profile = context.Request.Headers["Profile"];
+
+                if (profile != "Ada")
                 {
-                    context.Response.StatusCode = 500;
+                    context.Response.StatusCode = 403;
                     context.Response.ContentType = "application/json";
                     var responseJson = new
                     {
-                        Error = "Somente usuários com o perfil Ada podem acessar os métodos."
+                        Error = "Somente usuários com o perfil Ada podem acessar esse método."
                     };
                     await context.Response.WriteAsJsonAsync(responseJson);
                 } else
                     await next.Invoke();
-            });
+            });*/
 
             app.UseAuthorization();
 

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Ex1_API.props" />
+</Project>

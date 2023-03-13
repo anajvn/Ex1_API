@@ -1,0 +1,91 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Ex1_API.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Ex1_API.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ex1_API.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Ex1_API.Core/1.0.0": {
+      "type": "project",
+      "path": "../Ex1_API.Core/Ex1_API.Core.csproj",
+      "msbuildProject": "../Ex1_API.Core/Ex1_API.Core.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "Ex1_API.Core >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Usuário\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Usuário\\Desktop\\projetos_C_sharp\\source\\repos\\Ex1_API\\Ex1_API\\src\\Ex1_API.Application\\Ex1_API.Application.csproj",
+      "projectName": "Ex1_API.Application",
+      "projectPath": "C:\\Users\\Usuário\\Desktop\\projetos_C_sharp\\source\\repos\\Ex1_API\\Ex1_API\\src\\Ex1_API.Application\\Ex1_API.Application.csproj",
+      "packagesPath": "C:\\Users\\Usuário\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Usuário\\Desktop\\projetos_C_sharp\\source\\repos\\Ex1_API\\Ex1_API\\src\\Ex1_API.Application\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Usuário\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Users\\Usuário\\Desktop\\projetos_C_sharp\\source\\repos\\Ex1_API\\Ex1_API\\src\\Ex1_API.Core\\Ex1_API.Core.csproj": {
+              "projectPath": "C:\\Users\\Usuário\\Desktop\\projetos_C_sharp\\source\\repos\\Ex1_API\\Ex1_API\\src\\Ex1_API.Core\\Ex1_API.Core.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

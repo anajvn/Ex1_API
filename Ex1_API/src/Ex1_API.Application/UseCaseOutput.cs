@@ -27,13 +27,5 @@ namespace Ex1_API.Application
             Code = HttpStatusCode.OK;
             Errors = new List<string>();
         }
-
-        //static public HttpStatusCode Status(UseCaseOutput response)
-        //{
-        //    if (response.HasErrors)
-        //        return HttpStatusCode.BadRequest;
-
-        //    return HttpStatusCode.OK;
-        //}
     }
 }

@@ -10,37 +10,26 @@ namespace Ex1_API.Application.UseCases
     {
         public CadastrarAlunoUseCase()
         {
-            
         }
         public UseCaseOutput Execute(CadastrarAlunoInput input)
         {
-            try
+            var aluno = new Aluno
+            (
+                input.Nome,
+                input.Cidade,
+                input.Idade
+            );
+
+            if (!aluno.IsValid)
             {
-                var aluno = new Aluno
-                (
-                    input.Nome,
-                    input.Cidade,
-                    input.Idade
-                );
-
-                if (!aluno.IsValid)
-                {
-                    return new UseCaseOutput(aluno.Validations);
-                }
-
-                // Chama o banco de dados:
-                //íf já existe esse aluno...
-
-                //se não, salva aluno:
-                return new UseCaseOutput(new AlunoPresenter(aluno));
+                return new UseCaseOutput(aluno.Validations);
             }
-            catch (Exception ex)
-            {
-                return new UseCaseOutput(new List<string> { ex.Message })
-                {
-                    Code = HttpStatusCode.InternalServerError
-                };
-            }
+
+            // Chama o banco de dados:
+            //íf já existe esse aluno...
+
+            //se não, salva aluno:
+            return new UseCaseOutput(new AlunoPresenter(aluno));
         }
     }
 }

@@ -1,3 +1,4 @@
+using Ex1_API.Application;
 using Ex1_API.Application.Inputs;
 using Ex1_API.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -11,10 +12,15 @@ namespace Ex1_API.Presentation.Controllers
     {
         // private static List<Aluno> _alunos;
         private readonly ICadastrarAlunoUseCase _cadastrarAlunoUseCase;
+        private readonly IEditarAlunoUseCase _editarAlunoUseCase;
 
         public AlunoController(ICadastrarAlunoUseCase cadastrarAlunoUseCase)
         {
             _cadastrarAlunoUseCase = cadastrarAlunoUseCase;
+        }
+        public AlunoController(IEditarAlunoUseCase editarAlunoUseCase)
+        {
+            _editarAlunoUseCase = editarAlunoUseCase;
         }
 
         // Criar: POST
@@ -27,16 +33,20 @@ namespace Ex1_API.Presentation.Controllers
                 return BadRequest(response.Errors);
 
             return Ok(response.Data);
+        }
 
-            // return Status(response);
-        }
-        /*// Editar: PUT
+        // Editar: PUT
         [HttpPut]
-        public IActionResult Put([FromBody] CadastrarPessoaInput input, [FromServices] ICadastrarPessoaUseCase useCase, [FromHeader] string profile)
+        public IActionResult Put([FromRoute] Guid id ,[FromBody] EditarAlunoInput input)
         {
-            return Ok();
+            var response = _editarAlunoUseCase.Execute(id, input);
+
+            if (response.HasErrors)
+                return BadRequest(response.Errors);
+
+            return Ok(response.Data);
         }
-        // Remover: DELETE
+        /* // Remover: DELETE
         [HttpDelete]
         public IActionResult Delete([FromBody] CadastrarPessoaInput input, [FromServices] ICadastrarPessoaUseCase useCase, [FromHeader] string profile)
         {
@@ -47,12 +57,13 @@ namespace Ex1_API.Presentation.Controllers
         public IActionResult GetAll([FromBody] CadastrarPessoaInput input, [FromServices] ICadastrarPessoaUseCase useCase, [FromHeader] string profile)
         {
             return Ok();
-        }
-        // Listar por Id: GET /{id}
-        [HttpGet]
-        public IActionResult GetId([FromBody] CadastrarPessoaInput input, [FromServices] ICadastrarPessoaUseCase useCase, [FromHeader] string profile)
-        {
-            return Ok();
         }*/
+
+        // Listar por Id: GET /{id}
+        //[HttpGet("{id}")]
+        //public IActionResult GetId([FromBody] CadastrarPessoaInput input, [FromServices] ICadastrarPessoaUseCase useCase, [FromHeader] string profile)
+        //{
+        //    return Ok();
+        //}
     }
 }

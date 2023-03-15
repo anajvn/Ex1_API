@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ex1_API.Application\Ex1_API.Application.csproj" />
+    <ProjectReference Include="..\Ex1_API.Core\Ex1_API.Core.csproj" />
+  </ItemGroup>
+
 </Project>

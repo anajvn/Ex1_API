@@ -2,14 +2,13 @@
 {
     public class Aluno : BaseEntity
     {
-        public Guid Id { get; set; }
-        public string Nome { get; set; }
-        public string Cidade { get; set; }
-        public int? Idade { get; set; }
+        public int Id { get; private set; }
+        public string Nome { get; private set; }
+        public string Cidade { get; private set; }
+        public int? Idade { get; private set; }
 
         public Aluno(string nome, string cidade, int? idade) : base()
         {
-            Id = Guid.NewGuid();
             Nome = nome;
             Cidade = cidade;
             Idade = idade;
@@ -27,6 +26,8 @@
             {
                 Validations.Add($"{nameof(Cidade)} não pode estar vazio");
             }
+
+            IsValid = !Validations.Any();
         }
     }
 }

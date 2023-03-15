@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Ex1_API.Application\Ex1_API.Application.csproj" />
     <ProjectReference Include="..\Ex1_API.Core\Ex1_API.Core.csproj" />
+    <ProjectReference Include="..\Ex1_API.Database\Ex1_API.Database.csproj" />
   </ItemGroup>
 
 </Project>

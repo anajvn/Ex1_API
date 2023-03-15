@@ -3,13 +3,16 @@ using Ex1_API.Application.Interfaces;
 using Ex1_API.Application.Outputs;
 using Ex1_API.Core;
 using System.Net;
+using Ex1_API.Application.Interfaces.Repositories;
 
 namespace Ex1_API.Application.UseCases
 {
     public class CadastrarAlunoUseCase : ICadastrarAlunoUseCase
     {
-        public CadastrarAlunoUseCase()
+        private readonly IAlunoRepository _alunoRepository;
+        public CadastrarAlunoUseCase(IAlunoRepository alunoRepository)
         {
+            _alunoRepository = alunoRepository;
         }
         public UseCaseOutput Execute(CadastrarAlunoInput input)
         {
@@ -29,6 +32,9 @@ namespace Ex1_API.Application.UseCases
             //íf já existe esse aluno...
 
             //se não, salva aluno:
+            _alunoRepository.Adicionar(aluno);
+
+
             return new UseCaseOutput(new AlunoPresenter(aluno));
         }
     }

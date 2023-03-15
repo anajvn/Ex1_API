@@ -3,9 +3,9 @@
     public class BaseEntity
     {
         public List<string> Validations { get; set; }
-        public bool IsValid => !Validations.Any();
+        public bool IsValid { get; set; }
 
-        public BaseEntity()
+            public BaseEntity()
         {
             Validations = new List<string>();
         }

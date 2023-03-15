@@ -1,5 +1,8 @@
 using Ex1_API.Application.Interfaces;
+using Ex1_API.Application.Interfaces.Repositories;
 using Ex1_API.Application.UseCases;
+using Ex1_API.Database;
+using Ex1_API.Database.Repositories;
 using Ex1_API.Presentation.Filters;
 
 namespace Ex1_API.Presentation
@@ -33,6 +36,8 @@ namespace Ex1_API.Presentation
                options.OperationFilter<ProfileHeaderFilter>();
             });
 
+            builder.Services.AddScoped<Connection>();
+            builder.Services.AddScoped<IAlunoRepository, AlunoRepository>();
             builder.Services.AddScoped<ICadastrarAlunoUseCase, CadastrarAlunoUseCase>();
 
             var app = builder.Build();

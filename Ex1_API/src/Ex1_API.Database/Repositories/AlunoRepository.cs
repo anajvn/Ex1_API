@@ -38,5 +38,22 @@ namespace Ex1_API.Database.Repositories
             _alunos[index] = aluno;
             return true;
         }
+
+        public List<Aluno> BuscarTodos()
+        {
+            return _alunos;
+        }
+
+        public Aluno? BuscarPorId(Guid id)
+        {
+            return _alunos.FirstOrDefault(a => a.Id == id);
+        }
+
+        public bool DeletarAluno(Guid id)
+        {
+            var aluno = _alunos.FirstOrDefault(a => a.Id == id);
+
+            return _alunos.Remove(aluno);
+        }
     }
 }

@@ -2,13 +2,24 @@
 {
     public class Aluno : BaseEntity
     {
-        public int Id { get; private set; }
+        public Guid Id { get; private set; }
         public string Nome { get; private set; }
         public string Cidade { get; private set; }
         public int? Idade { get; private set; }
 
         public Aluno(string nome, string cidade, int? idade) : base()
         {
+            Id = Guid.NewGuid();
+            Nome = nome;
+            Cidade = cidade;
+            Idade = idade;
+
+            this.Validate();
+        }
+
+        public Aluno(Guid id, string nome, string cidade, int? idade) : base()
+        {
+            Id = id;
             Nome = nome;
             Cidade = cidade;
             Idade = idade;

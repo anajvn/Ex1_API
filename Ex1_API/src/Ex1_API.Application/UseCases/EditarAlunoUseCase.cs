@@ -19,15 +19,11 @@ namespace Ex1_API.Application.UseCases
         {
             var aluno = new Aluno
             (
+                input.Id,
                 input.Nome,
                 input.Cidade,
                 input.Idade
             );
-
-            if (!aluno.IsValid)
-            {
-                return new UseCaseOutput(aluno.Validations);
-            }
 
             // Chama o banco de dados:
             // Ver se o aluno existe aluno, se existir, salvar;
@@ -35,7 +31,7 @@ namespace Ex1_API.Application.UseCases
 
             if(!result)
             {
-                aluno.Validations.Add("O aluno ainda não foi encontrado.");
+                aluno.Validations.Add("O aluno não foi encontrado.");
                 return new UseCaseOutput(aluno.Validations);
             }
 

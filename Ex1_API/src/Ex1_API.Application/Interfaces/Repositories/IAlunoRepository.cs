@@ -8,5 +8,10 @@ namespace Ex1_API.Application.Interfaces.Repositories
 
         bool Editar(Aluno aluno);
 
+        List<Aluno> BuscarTodos();
+
+        Aluno BuscarPorId(Guid id);
+
+        bool DeletarAluno(Guid id);
     }
 }

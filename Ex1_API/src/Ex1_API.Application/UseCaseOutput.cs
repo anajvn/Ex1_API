@@ -18,7 +18,7 @@ namespace Ex1_API.Application
         public UseCaseOutput(List<string> errors)
         {
             Errors = errors;
-            Code = HttpStatusCode.OK;
+            Code = HttpStatusCode.BadRequest;
         }
 
         public UseCaseOutput(object data)

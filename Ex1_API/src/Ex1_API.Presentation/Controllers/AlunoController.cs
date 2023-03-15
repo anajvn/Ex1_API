@@ -13,15 +13,24 @@ namespace Ex1_API.Presentation.Controllers
         // private static List<Aluno> _alunos;
         private readonly ICadastrarAlunoUseCase _cadastrarAlunoUseCase;
         private readonly IEditarAlunoUseCase _editarAlunoUseCase;
+        private readonly IBuscarAlunosUseCase _buscarAlunosUseCase;
+        private readonly IBuscarAlunoUseCase _buscarAlunoUseCase;
+        private readonly IDeletarAlunoUseCase _deletarAlunoUseCase;
 
-        public AlunoController(ICadastrarAlunoUseCase cadastrarAlunoUseCase)
+        public AlunoController(
+            ICadastrarAlunoUseCase cadastrarAlunoUseCase,
+            IEditarAlunoUseCase editarAlunoUseCase,
+            IBuscarAlunosUseCase buscarAlunosUseCase,
+            IBuscarAlunoUseCase buscarAlunoUseCase,
+            IDeletarAlunoUseCase deletarAlunoUseCase)
         {
             _cadastrarAlunoUseCase = cadastrarAlunoUseCase;
-        }
-        public AlunoController(IEditarAlunoUseCase editarAlunoUseCase)
-        {
             _editarAlunoUseCase = editarAlunoUseCase;
+            _buscarAlunosUseCase = buscarAlunosUseCase;
+            _buscarAlunoUseCase = buscarAlunoUseCase;
+            _deletarAlunoUseCase = deletarAlunoUseCase;
         }
+        
 
         // Criar: POST
         [HttpPost]
@@ -46,24 +55,38 @@ namespace Ex1_API.Presentation.Controllers
 
             return Ok(response.Data);
         }
-        /* // Remover: DELETE
-        [HttpDelete]
-        public IActionResult Delete([FromBody] CadastrarPessoaInput input, [FromServices] ICadastrarPessoaUseCase useCase, [FromHeader] string profile)
+        
+        // Remover: DELETE
+        [HttpDelete("{id}")]
+        public IActionResult Delete([FromRoute] Guid id)
         {
-            return Ok();
+            var response = _deletarAlunoUseCase.Execute(id);
+
+            if (response.HasErrors)
+                return BadRequest(response.Errors);
+
+            return Ok(response.Code);
         }
+
         // Listar todos: GET parâmetros: nome, cidade
         [HttpGet]
-        public IActionResult GetAll([FromBody] CadastrarPessoaInput input, [FromServices] ICadastrarPessoaUseCase useCase, [FromHeader] string profile)
+        public IActionResult GetAll()
         {
-            return Ok();
-        }*/
+            var alunosResponse = _buscarAlunosUseCase.Execute();
+
+            return Ok(alunosResponse.Data);
+        }
 
         // Listar por Id: GET /{id}
-        //[HttpGet("{id}")]
-        //public IActionResult GetId([FromBody] CadastrarPessoaInput input, [FromServices] ICadastrarPessoaUseCase useCase, [FromHeader] string profile)
-        //{
-        //    return Ok();
-        //}
+        [HttpGet("{id}")]
+        public IActionResult GetById([FromRoute]Guid id)
+        {
+            var response = _buscarAlunoUseCase.Execute(id);
+
+            if (response.HasErrors)
+                return BadRequest(response.Errors);
+
+            return Ok(response.Data);
+        }
     }
 }

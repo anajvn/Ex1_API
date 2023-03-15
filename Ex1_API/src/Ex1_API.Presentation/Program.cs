@@ -11,13 +11,7 @@ namespace Ex1_API.Presentation
     {
         public static void Main(string[] args)
         {
-            /* Crie uma API Web, utilizando conceitos de Clean Architecture, na qual contenha:
-            Criação de 5 Actions
-                Criar: POST
-                Editar: PUT
-                Remover: DELETE
-                Listar todos: GET parâmetros: nome, cidade
-                Listar por Id: GET /{id}
+            /* Crie uma API Web, utilizando conceitos de Clean Architecture.
 
             Regras:
                 Nome e Cidade do aluno não podem ser vazios
@@ -40,6 +34,8 @@ namespace Ex1_API.Presentation
             builder.Services.AddScoped<IAlunoRepository, AlunoRepository>();
             builder.Services.AddScoped<ICadastrarAlunoUseCase, CadastrarAlunoUseCase>();
             builder.Services.AddScoped<IEditarAlunoUseCase, EditarAlunoUseCase>();
+            builder.Services.AddScoped<IBuscarAlunosUseCase, BuscarAlunosUseCase>();
+            builder.Services.AddScoped<IDeletarAlunoUseCase, DeletarAlunoUseCase>();
 
             var app = builder.Build();
 

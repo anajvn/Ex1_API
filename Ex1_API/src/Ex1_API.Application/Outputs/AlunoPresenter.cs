@@ -4,13 +4,11 @@ namespace Ex1_API.Application.Outputs
 {
     public class AlunoPresenter
     {
-        public int Id { get; set; }
         public string Dados { get; set; }
 
         public AlunoPresenter(Aluno aluno)
         {
-            Id = aluno.Id;
-            Dados = $"Nome: {aluno.Nome} - Cidade: {aluno.Cidade}";
+            Dados = $"Id: {aluno.Id} - Nome: {aluno.Nome} - Cidade: {aluno.Cidade}";
 
             if (aluno.Idade != null)
             {

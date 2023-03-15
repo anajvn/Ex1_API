@@ -36,9 +36,10 @@ namespace Ex1_API.Presentation
                options.OperationFilter<ProfileHeaderFilter>();
             });
 
-            builder.Services.AddScoped<Connection>();
+            //builder.Services.AddScoped<Connection>();
             builder.Services.AddScoped<IAlunoRepository, AlunoRepository>();
             builder.Services.AddScoped<ICadastrarAlunoUseCase, CadastrarAlunoUseCase>();
+            builder.Services.AddScoped<IEditarAlunoUseCase, EditarAlunoUseCase>();
 
             var app = builder.Build();
 

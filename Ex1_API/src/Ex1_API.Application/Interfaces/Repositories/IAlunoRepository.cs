@@ -6,5 +6,7 @@ namespace Ex1_API.Application.Interfaces.Repositories
     {
         void Adicionar(Aluno aluno);
 
+        bool Editar(Aluno aluno);
+
     }
 }

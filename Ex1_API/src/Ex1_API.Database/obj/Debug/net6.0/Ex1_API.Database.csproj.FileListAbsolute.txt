@@ -1,0 +1,17 @@
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\Ex1_API\src\Ex1_API.Database\obj\Debug\net6.0\Ex1_API.Database.csproj.AssemblyReference.cache
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\Ex1_API\src\Ex1_API.Database\obj\Debug\net6.0\Ex1_API.Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\Ex1_API\src\Ex1_API.Database\obj\Debug\net6.0\Ex1_API.Database.AssemblyInfoInputs.cache
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\Ex1_API\src\Ex1_API.Database\obj\Debug\net6.0\Ex1_API.Database.AssemblyInfo.cs
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\Ex1_API\src\Ex1_API.Database\obj\Debug\net6.0\Ex1_API.Database.csproj.CoreCompileInputs.cache
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\Ex1_API\src\Ex1_API.Database\bin\Debug\net6.0\Ex1_API.Database.deps.json
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\Ex1_API\src\Ex1_API.Database\bin\Debug\net6.0\Ex1_API.Database.dll
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\Ex1_API\src\Ex1_API.Database\bin\Debug\net6.0\Ex1_API.Database.pdb
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\Ex1_API\src\Ex1_API.Database\bin\Debug\net6.0\Ex1_API.Application.dll
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\Ex1_API\src\Ex1_API.Database\bin\Debug\net6.0\Ex1_API.Core.dll
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\Ex1_API\src\Ex1_API.Database\bin\Debug\net6.0\Ex1_API.Application.pdb
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\Ex1_API\src\Ex1_API.Database\bin\Debug\net6.0\Ex1_API.Core.pdb
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\Ex1_API\src\Ex1_API.Database\obj\Debug\net6.0\Ex1_API.Database.csproj.CopyComplete
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\Ex1_API\src\Ex1_API.Database\obj\Debug\net6.0\Ex1_API.Database.dll
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\Ex1_API\src\Ex1_API.Database\obj\Debug\net6.0\refint\Ex1_API.Database.dll
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\Ex1_API\src\Ex1_API.Database\obj\Debug\net6.0\Ex1_API.Database.pdb
+C:\Users\Usuário\Desktop\projetos_C_sharp\source\repos\Ex1_API\Ex1_API\src\Ex1_API.Database\obj\Debug\net6.0\ref\Ex1_API.Database.dll

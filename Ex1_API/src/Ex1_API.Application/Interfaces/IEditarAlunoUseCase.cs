@@ -9,6 +9,6 @@ namespace Ex1_API.Application.Interfaces
 {
     public interface IEditarAlunoUseCase
     {
-        UseCaseOutput Execute(Guid id, EditarAlunoInput input);
+        UseCaseOutput Execute(EditarAlunoInput input);
     }
 }

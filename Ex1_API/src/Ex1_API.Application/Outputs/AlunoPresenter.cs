@@ -4,7 +4,7 @@ namespace Ex1_API.Application.Outputs
 {
     public class AlunoPresenter
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Dados { get; set; }
 
         public AlunoPresenter(Aluno aluno)

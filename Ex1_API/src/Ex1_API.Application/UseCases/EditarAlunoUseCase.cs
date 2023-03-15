@@ -1,17 +1,21 @@
 ﻿using Ex1_API.Application.Inputs;
+using Ex1_API.Application.Interfaces.Repositories;
 using Ex1_API.Application.Outputs;
 using Ex1_API.Core;
 using System.Net;
+using Ex1_API.Application.Interfaces;
 
 namespace Ex1_API.Application.UseCases
 {
-    public class EditarAlunoUseCase
+    public class EditarAlunoUseCase : IEditarAlunoUseCase
     {
-        public EditarAlunoUseCase()
+        private readonly IAlunoRepository _alunoRepository;
+        public EditarAlunoUseCase(IAlunoRepository alunoRepository)
         {
+            _alunoRepository = alunoRepository;
         }
 
-        public UseCaseOutput Execute(Guid id, EditarAlunoInput input)
+        public UseCaseOutput Execute(EditarAlunoInput input)
         {
             var aluno = new Aluno
             (
@@ -26,9 +30,15 @@ namespace Ex1_API.Application.UseCases
             }
 
             // Chama o banco de dados:
-            //íf já existe esse aluno...
+            // Ver se o aluno existe aluno, se existir, salvar;
+            var result = _alunoRepository.Editar(aluno);
 
-            //se não, salva aluno:
+            if(!result)
+            {
+                aluno.Validations.Add("O aluno ainda não foi encontrado.");
+                return new UseCaseOutput(aluno.Validations);
+            }
+
             return new UseCaseOutput(new AlunoPresenter(aluno));
         }
     }

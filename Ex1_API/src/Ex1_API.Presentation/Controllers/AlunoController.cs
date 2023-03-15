@@ -37,9 +37,9 @@ namespace Ex1_API.Presentation.Controllers
 
         // Editar: PUT
         [HttpPut]
-        public IActionResult Put([FromRoute] Guid id ,[FromBody] EditarAlunoInput input)
+        public IActionResult Put([FromBody] EditarAlunoInput input)
         {
-            var response = _editarAlunoUseCase.Execute(id, input);
+            var response = _editarAlunoUseCase.Execute(input);
 
             if (response.HasErrors)
                 return BadRequest(response.Errors);

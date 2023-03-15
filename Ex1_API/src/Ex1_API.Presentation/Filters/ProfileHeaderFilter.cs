@@ -2,7 +2,7 @@
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace Ex1_API.Presentation
+namespace Ex1_API.Presentation.Filters
 {
     public class ProfileHeaderFilter : IOperationFilter
     {
